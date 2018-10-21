@@ -41,7 +41,7 @@ class KeyBorad {
         })
 
         this.COLS_PIN.forEach((pin, index) => {
-            let btn = new Gpio(pin, 'in', 'rising', {debounceTimeout: 10})
+            let btn = new Gpio(pin, 'in', 'both')
             
             btn.watch((err, value) => {
                 if(err) {
@@ -67,7 +67,7 @@ class KeyBorad {
         })
 
         this.ROWS_PIN.forEach((pin, index) => {
-            let btn = new Gpio(pin, 'in', 'rising', {debounceTimeout: 10})
+            let btn = new Gpio(pin, 'in', 'both')
             btn.watch((err, value) => {
                 if(err) {
                     throw err
