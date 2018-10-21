@@ -73,7 +73,7 @@ class KeyBorad {
 
     reversal() {
         this.ROWS_BTN.forEach(btn => {
-            console.log(btn.direction())
+            console.log(btn)
             if(btn.direction() == 'in') {
                 btn.setDirection('out')
                 btn.writeSync(1)
@@ -83,7 +83,7 @@ class KeyBorad {
         })
 
         this.COLS_BTN.forEach(btn => {
-            console.log(btn.direction())
+            console.log(btn)
             if(btn.direction() == 'in') {
                 btn.setDirection('out')
                 btn.writeSync(1)
