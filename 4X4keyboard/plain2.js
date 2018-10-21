@@ -19,6 +19,7 @@ class KeyBorad {
         this.pressedColKey = -1
         this.pressedRowKey = -1
         console.log('程序初始化')
+        this.listenCol()
     }
 
     init() {
