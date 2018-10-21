@@ -44,8 +44,9 @@ class KeyBorad {
                 if(err) {
                     throw err
                 }
-
+                console.log(`第${index}列被按下了`)
                 if(value) {
+                    // console.log(`第${index}列被按下了`)
                     this.pressedColKey = index
                     this.pressedRowKey = -1
                     this.init()
@@ -67,7 +68,7 @@ class KeyBorad {
                 if(err) {
                     throw err
                 }
-
+                console.log(`第${index}行被按下了`)
                 if(value) {
                     this.pressedRowKey = index
                     this.systemOut()
@@ -84,7 +85,7 @@ class KeyBorad {
 
     systemOut() {
         let key = this.points[this.pressedRowKey][this.pressedColKey]
-        console.log(key)
+        console.log('按下了', key)
     }
 }
 
