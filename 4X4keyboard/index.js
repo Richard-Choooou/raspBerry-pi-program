@@ -4,8 +4,8 @@ const COLS = [12, 16, 18, 22]
 
 class KeyBorad {
     constructor() {
-        this.ROWS = ROWS
-        this.COLS = COLS
+        this.ROWS_PIN = ROWS
+        this.COLS_PIN = COLS
         this.ROWS_BTN = []
         this.COLS_BTN = []
 
