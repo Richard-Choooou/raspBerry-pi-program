@@ -44,7 +44,7 @@ class KeyBorad {
 
         this.COLS_PIN.forEach((pin, index) => {
             console.log('初始化按键', pin)
-            let btn = new Gpio(pin, 'in')
+            let btn = new Gpio(pin, 'in', 'both')
             
             btn.watch((err, value) => {
                 console.log(err, value)
