@@ -87,3 +87,9 @@ class KeyBorad {
         console.log(key)
     }
 }
+
+keyborad = new KeyBorad()
+
+process.on('SIGINT', () => {
+    keyborad.init()
+});
