@@ -41,6 +41,7 @@ class KeyBorad {
         })
 
         this.COLS_PIN.forEach((pin, index) => {
+            console.log(index)
             let btn = new Gpio(pin, 'in', 'both')
             
             btn.watch((err, value) => {
@@ -67,7 +68,6 @@ class KeyBorad {
         })
 
         this.ROWS_PIN.forEach((pin, index) => {
-            console.log(index)
             let btn = new Gpio(pin, 'in', 'both')
             btn.watch((err, value) => {
                 if(err) {
