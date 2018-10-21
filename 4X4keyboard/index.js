@@ -48,6 +48,7 @@ class KeyBorad {
                     throw err
                 }
                 if(value) {
+                    console.log(`按下了第${index + 1}列`)
                     this.pressedColKey = index
                     this.pressedRowKey = -1
                     this.init()
@@ -72,6 +73,7 @@ class KeyBorad {
                     throw err
                 }
                 if(value) {
+                    console.log(`按下了第${index + 1}行`)
                     this.pressedRowKey = index
                     this.systemOut()
                 } else {
