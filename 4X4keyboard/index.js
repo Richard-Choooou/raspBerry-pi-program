@@ -41,7 +41,6 @@ class KeyBorad {
         })
 
         this.COLS_PIN.forEach((pin, index) => {
-            console.log(index)
             let btn = new Gpio(pin, 'in', 'both')
             
             btn.watch((err, value) => {
@@ -49,7 +48,6 @@ class KeyBorad {
                     throw err
                 }
                 if(value) {
-                    console.log(`第${index}列被按下了`)
                     this.pressedColKey = index
                     this.pressedRowKey = -1
                     this.init()
@@ -74,7 +72,6 @@ class KeyBorad {
                     throw err
                 }
                 if(value) {
-                    console.log(`第${index}行被按下了`)
                     this.pressedRowKey = index
                     this.systemOut()
                 } else {
