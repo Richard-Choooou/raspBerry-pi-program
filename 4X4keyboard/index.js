@@ -24,7 +24,6 @@ class KeyBorad {
     }
 
     init() {
-        console.log('初始化按键')
         while(this.ROWS_BTN.length > 0) {
             this.ROWS_BTN.shift().unexport();
         }
@@ -36,24 +35,20 @@ class KeyBorad {
 
     listenCol() {
         this.ROWS_PIN.forEach(pin => {
-            console.log('初始化按键', pin)
             let btn = new Gpio(pin, 'out')
             btn.writeSync(1)
             this.ROWS_BTN.push(btn)
         })
 
         this.COLS_PIN.forEach((pin, index) => {
-            console.log('初始化按键', pin)
             let btn = new Gpio(pin, 'in', 'both')
             
             btn.watch((err, value) => {
-                console.log(err, value)
                 if(err) {
                     throw err
                 }
-                console.log(`第${index}列被按下了`)
                 if(value) {
-                    // console.log(`第${index}列被按下了`)
+                    console.log(`第${index}列被按下了`)
                     this.pressedColKey = index
                     this.pressedRowKey = -1
                     this.init()
@@ -77,8 +72,8 @@ class KeyBorad {
                 if(err) {
                     throw err
                 }
-                console.log(`第${index}行被按下了`)
                 if(value) {
+                    console.log(`第${index}行被按下了`)
                     this.pressedRowKey = index
                     this.systemOut()
                 } else {
