@@ -36,10 +36,12 @@ class KeyBorad {
 
     listenCol() {
         this.ROWS_PIN.forEach(pin => {
+            console.log('初始化按键', pin)
             this.ROWS_BTN.push(new Gpio(pin, 'out'))
         })
 
         this.COLS_PIN.forEach((pin, index) => {
+            console.log('初始化按键', pin)
             let btn = new Gpio(pin, 'in')
             btn.watch((err, value) => {
                 if(err) {
