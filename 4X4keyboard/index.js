@@ -92,5 +92,6 @@ class KeyBorad {
 keyborad = new KeyBorad()
 
 process.on('SIGINT', () => {
+    console.log('程序退出')
     keyborad.init()
 });
