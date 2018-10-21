@@ -47,6 +47,7 @@ class KeyBorad {
             let btn = new Gpio(pin, 'in')
             
             btn.watch((err, value) => {
+                console.log(err, value)
                 if(err) {
                     throw err
                 }
