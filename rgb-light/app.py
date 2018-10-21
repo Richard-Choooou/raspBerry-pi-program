@@ -1,4 +1,4 @@
-GPIO.cleanup()                                                                                                                 import time
+import RPi.GPIO as GPIO
 
 blue = 11           #蓝灯信号输出引脚
 red = 22            #红灯信号输出引脚

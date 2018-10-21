@@ -65,7 +65,9 @@ class KeyBorad {
 
     listenRow() {
         this.COLS_PIN.forEach(pin => {
-            this.COLS_BTN.push(new Gpio(pin, 'out'))
+            let btn = new Gpio(pin, 'out')
+            btn.writeSync(1)
+            this.COLS_BTN.push(btn)
         })
 
         this.ROWS_PIN.forEach((pin, index) => {
