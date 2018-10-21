@@ -1,6 +1,6 @@
 const Gpio = require('onoff').Gpio
-const ROWS = [11, 13, 15, 31]
-const COLS = [12, 16, 18, 22]
+const ROWS = [17, 27, 22, 6]
+const COLS = [18, 23, 24, 25]
 
 class KeyBorad {
     constructor() {
