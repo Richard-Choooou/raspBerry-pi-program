@@ -72,7 +72,7 @@ class KeyBorad {
         })
 
         this.ROWS_PIN.forEach((pin, index) => {
-            let btn = new Gpio(pin, 'in')
+            let btn = new Gpio(pin, 'in', 'both')
             btn.watch((err, value) => {
                 if(err) {
                     throw err
