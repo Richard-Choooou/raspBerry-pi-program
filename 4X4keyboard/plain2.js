@@ -99,6 +99,7 @@ class KeyBorad {
     }
 }
 
+
 keyborad = new KeyBorad()
 
 process.on('SIGINT', () => {
