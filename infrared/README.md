@@ -2,7 +2,7 @@
 
 # 引脚图
 
-![untitled sketch_bb](https://user-images.githubusercontent.com/23492006/47965884-50774280-e087-11e8-8679-bab0438e8eed.jpg)
+![untitled sketch_bb](https://user-images.githubusercontent.com/23492006/47997086-9d195700-e135-11e8-8152-4840411cb4d2.jpg)
 
 # 详细说明
 
